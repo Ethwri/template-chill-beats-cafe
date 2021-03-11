@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lato:wght@300;400&family=Pacifico&display=swap");
+
+/* could use a better colour scheme */
+:root {
+  --clr-primary-200: #8ab1c4;
+  --clr-primary-400: #007aa2;
+
+  --clr-neutral-100: #f1eef1;
+  --clr-neutral-200: #f4c7a7;
+
+  --clr-accent-600: #74441d;
+
+  --ff-heading: "Pacifico", cursive;
+  --ff-primary: "Lato", sans-serif;
+  --ff-accent: "Architects Daughter", cursive;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  font-weight: 1.3125rem;
+  line-height: 1.6;
+  background-color: var(--clr-neutral-100);
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  font-family: var(--ff-primary);
+}
+
+/* Main Headings */
+h1 {
+  font-family: var(--ff-heading);
+  padding: 1rem;
+}
+
+/* secondary headings */
+h2,
+h3,
+h4 {
+  font-family: var(--ff-accent);
+}
+
+/* Background and font colours for different sections */
+.bg-primary {
+  background-color: var(--clr-primary-400);
+}
+.bg-primary,
+h1 {
+  color: var(--clr-accent-600);
+}
+.bg-primary,
+li {
+  color: var(--clr-neutral-200);
+}
+
+.bg-light {
+  background-color: var(--clr-neutral-100);
+}
+.bg-primary-2 {
+  background-color: var(--clr-primary-200);
+}
+
+header {
+  padding: 1rem 1rem 0 1rem;
+}
+section {
+  padding: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+.flex-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.container {
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+}
+
+/* Changes to a single column when the screen is small enough */
+.split {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 40em) {
+  .split {
+    flex-direction: row;
+  }
+
+  .split > * {
+    flex-basis: 100%;
+  }
+}
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1rem;
+}
+.top-nav li {
+  list-style-type: none;
+  padding: 0 3px 0 3px;
+}
+
+/*--- Photo slide show ---*/
+/* note that first and last photo are duplicates */
+.slider {
+  overflow: hidden;
+}
+.slider figure {
+  position: relative;
+  display: flex;
+  width: 500%; /* number of imges *100 */
+  margin: 0;
+  left: 0;
+  animation: ease-in-out 18s slider infinite;
+}
+.slider figure img {
+  width: 20%; /* 100/number of images */
+  float: left;
+}
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}
