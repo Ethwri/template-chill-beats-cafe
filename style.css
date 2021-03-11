@@ -111,7 +111,7 @@ section {
 .top-nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 1rem;
 }
 .top-nav li {
@@ -119,8 +119,9 @@ section {
   padding: 0 3px 0 3px;
 }
 
-/*--- Photo slide show ---*/
+/* --- Photo slide show ---  */
 /* note that first and last photo are duplicates */
+/* https://www.youtube.com/watch?v=pGHOaY4dhAA video I used */
 .slider {
   overflow: hidden;
 }
